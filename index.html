@@ -18,6 +18,8 @@
           <div class="balloon-3"></div>
           <div class="balloon-4"></div>
         </div>
+        <!-- Tambahkan tombol "tekan" -->
+        <button id="pressButton">TEKAN</button>
       </div>
       <div class="cardInside">
         <h3 class="back">HAPPY BIRTHDAY</h3>
@@ -31,10 +33,16 @@
       </div>
     </div>
     <!-- Audio -->
-    <audio id="birthdayAudio" src="ultah.mp3"></audio>
+    <audio id="birthdayAudio" src="ultah.mp3" loop></audio>
     <!-- JavaScript -->
     <script>
       document.querySelector('.birthdayCard').addEventListener('click', function () {
+        const audio = document.getElementById('birthdayAudio');
+        audio.play();
+      });
+
+      // Tambahkan event listener untuk tombol "tekan"
+      document.getElementById('pressButton').addEventListener('click', function () {
         const audio = document.getElementById('birthdayAudio');
         audio.play();
       });
